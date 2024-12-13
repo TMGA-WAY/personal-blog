@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title%}
+My Blog
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<header id="main-navigation">
+    <h1>
+        <a href="">Mitra's Blog</a></h1>
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+
+</header>
+
+
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/dipankar.jpeg' %}" alt="Mitra's Blog">
+        <h2>MITRA'S BLOG</h2>
+    </header>
+    <p>HI I am Mitra. I am a software engineer and I love to write about programming and technology. I am a full stack
+        developer and I have been working in the industry for 5 years. I have worked on various projects and I have
+        experience in different technologies. I am passionate about programming and I love to share my knowledge with
+        others. I have created this blog to share my thoughts and ideas with the world. I hope you will find my blog
+        interesting and informative. Please feel free to leave your comments and feedback. Thank you for visiting my
+        blog.</p>
+</section>
+
+<section id="latest-posts">
+    <h2>
+        My latest Thoughts
+    </h2>
+
+    <ul>
+        <li>
+            <article class="post">
+                <a href="">
+                    <img src="{% static 'blog/images/mountain.png' %}" alt="a"/>
+                    <div class="post__content">
+                        <h3>
+                            Mountain Hiking
+                        </h3>
+                        <p>
+                            There is nothing like hiking in the mountains. The fresh air, the beautiful scenery, the
+                            sense of accomplishment when you reach the summit. It is an experience like no other. I
+                            have been hiking in the mountains for many years and I never get tired of it. I love the
+                            challenge of climbing to the top of a mountain and the feeling of freedom that comes
+                            with it. I have hiked in many different mountains around the world and each one has its
+                            own unique beauty. I hope you will enjoy reading about my adventures in the mountains
+                            and that it will inspire you to get out and explore the great outdoors. </p>
+
+
+                    </div>
+                </a>
+            </article>
+        </li>
+    </ul>
+</section>
+
+
+<section id="about">
+    <h2>
+        What I Do
+    </h2>
+    <p> I love programming and I am passionate about technology. I am always learning new
+        technologies, and I am
+        constantly improving my skills. I love to share my knowledge with others and I enjoy
+        helping people learn new
+        things. I have created this blog to share my thoughts and ideas with the world. I hope
+        you will find my blog
+        interesting and informative. Please feel free to leave your comments and feedback. Thank
+        you for visiting my
+        blog.</p>
+</section>
+{% endblock %}
