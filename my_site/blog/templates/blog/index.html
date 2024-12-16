@@ -32,7 +32,9 @@ My Blog
     </h2>
 
     <ul>
+        {% for post in posts %}
         {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 
 </section>
