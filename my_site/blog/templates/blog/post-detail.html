@@ -12,7 +12,7 @@ This Post Title
 {% block content %}
 
 {% if comment_form.errors %}
-<div id = "alert">
+<div id="alert">
     <h2>
         Saving the comment failed!
     </h2>
@@ -33,10 +33,14 @@ This Post Title
     </div>
 
 
-    <div id = "read-later">
-        <button>
-            Read Later
-        </button>
+    <div id="read-later">
+        <form action="{% url 'read-later' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{post.id}}" name="post_id">
+            <button>
+                Read Later
+            </button>
+        </form>
     </div>
 
 
@@ -60,7 +64,7 @@ This Post Title
         {% for comment in post_comments %}
         <li>
             <h2> {{ comment.user_name }} </h2>
-                <p>{{ comment.text | linebreaks }}</p>
+            <p>{{ comment.text | linebreaks }}</p>
 
         </li>
         {% endfor %}
